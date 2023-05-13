@@ -1,6 +1,7 @@
 package com.notebook.collegeapp;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -8,7 +9,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -41,10 +41,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+       //Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
+
         navigationView.setNavigationItemSelectedListener(this);
-
-
         NavigationUI.setupWithNavController(bottomNavigationView,navController);
     }
 
