@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment android:id="@+id/navigation_home"
+        android:name="com.notebook.collegeapp.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+    <fragment android:id="@+id/navigation_gallery"
+        android:name="com.notebook.collegeapp.ui.gallery.GalleryFragment"
+        android:label="Gallery"
+        tools:layout="@layout/fragment_gallery">
+
+    </fragment>
+    <fragment android:id="@+id/navigation_notice"
+        android:name="com.notebook.collegeapp.ui.notice.NoticeFragment"
+        android:label="Notice"
+        tools:layout="@layout/fragment_notice">
+
+    </fragment>
+    <fragment android:id="@+id/navigation_faculty"
+        android:name="com.notebook.collegeapp.ui.faculty.FacultyFragment"
+        android:label="Faculty"
+        tools:layout="@layout/fragment_faculty">
+
+    </fragment>
+    <fragment android:id="@+id/navigation_about"
+        android:name="com.notebook.collegeapp.ui.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about">
+
+    </fragment>
+
+</navigation>
