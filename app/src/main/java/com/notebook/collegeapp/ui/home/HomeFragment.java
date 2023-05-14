@@ -1,5 +1,7 @@
 package com.notebook.collegeapp.ui.home;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,6 +17,7 @@ import com.notebook.collegeapp.R;
 
 public class HomeFragment extends Fragment {
     private ViewFlipper flipper;
+    private ImageView map;
 
 
 
@@ -27,8 +30,25 @@ public class HomeFragment extends Fragment {
         flipper=view.findViewById(R.id.flipper);
         for(int i=0; i< imarray.length;i++)
             showImage(imarray[i]);
+
+//        map = view.findViewById(R.id.map);
+//        map.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openMap();
+//            }
+//        });
+
         return view;
     }
+
+//    private void openMap()
+//    {
+//        Uri uri = Uri.parse("geo:0,0?q= Jaypee University of Engineering and Technology Guna");
+//        Intent intent= new Intent(Intent.ACTION_VIEW, uri);
+//        intent.setPackage("com.google.android.apps.maps");
+//        startActivity(intent);
+//    }
     public void showImage(int img)
     {
         ImageView imageview=new ImageView(getActivity());
