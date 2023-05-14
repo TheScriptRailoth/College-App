@@ -34,13 +34,15 @@ public class NoticeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_notice, container, false);
-    deleteNoticeRecycler= view.findViewById(R.id.deleteNoticeRecycler);
-    progressBar= view.findViewById(R.id.progressBar);
+        deleteNoticeRecycler= view.findViewById(R.id.deleteNoticeRecycler);
+        progressBar= view.findViewById(R.id.progressBar);
 
-    reference= FirebaseDatabase.getInstance().getReference().child("Notice");
+        reference= FirebaseDatabase.getInstance().getReference().child("Notice");
 
         deleteNoticeRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         deleteNoticeRecycler.setHasFixedSize(true);
+
+        getNotice();
 
     return view;
 }

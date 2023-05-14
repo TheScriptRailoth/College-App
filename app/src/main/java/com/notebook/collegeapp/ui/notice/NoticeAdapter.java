@@ -49,7 +49,7 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeView
     @Override
     public void onBindViewHolder(@NonNull NoticeViewAdapter holder, @SuppressLint("RecyclerView") int position) {
 
-        NoticeData currentItem = list.get(position);
+        final NoticeData currentItem = list.get(position);
 
         holder.deleteNoticeTitle.setText(currentItem.getTitle());
         holder.date.setText(currentItem.getDate());
