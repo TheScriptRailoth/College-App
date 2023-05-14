@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment {
         imageview.setBackgroundResource(img);
         flipper.addView(imageview);
         flipper.setAutoStart(true);
-        flipper.setFlipInterval(2700);
+        flipper.setFlipInterval(2000);
         flipper.setInAnimation(getActivity(),android.R.anim.slide_in_left);
         flipper.setOutAnimation(getActivity(),android.R.anim.slide_out_right);
     }

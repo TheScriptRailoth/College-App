@@ -19,16 +19,18 @@
             android:id="@+id/collegeImage">
 
         </ImageView>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/about_clg"
-            android:layout_marginTop="@dimen/text_margin"
-            android:layout_marginHorizontal="@dimen/text_margin"
-            android:textSize="@dimen/text_size"
             android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/text_margin"
+            android:layout_marginTop="@dimen/text_margin"
+            android:fontFamily="@string/light"
+            android:text="@string/about_clg"
+            android:textAlignment="center"
             android:textColor="@color/textColor"
-            android:fontFamily="@string/light"/>
+            android:textSize="@dimen/text_size" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,7 +59,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Branch"
+            android:text="Programs Offered"
             android:layout_marginTop="36dp"
             android:textSize="@dimen/title_size"
             android:layout_gravity="center_horizontal"
@@ -65,13 +67,14 @@
             android:fontFamily="@string/bold"/>
 
         <androidx.viewpager.widget.ViewPager
+
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginTop="@dimen/text_margin"
-            android:foregroundGravity="center"
             android:clipToPadding="false"
-            android:overScrollMode="never"
-            android:id="@+id/viewPager">
+            android:foregroundGravity="center"
+            android:overScrollMode="never">
 
         </androidx.viewpager.widget.ViewPager>
         <LinearLayout
