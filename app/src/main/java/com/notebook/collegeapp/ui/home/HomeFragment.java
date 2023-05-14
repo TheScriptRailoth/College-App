@@ -31,24 +31,24 @@ public class HomeFragment extends Fragment {
         for(int i=0; i< imarray.length;i++)
             showImage(imarray[i]);
 
-//        map = view.findViewById(R.id.map);
-//        map.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                openMap();
-//            }
-//        });
+        map = view.findViewById(R.id.map);
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMap();
+            }
+        });
 
         return view;
     }
 
-//    private void openMap()
-//    {
-//        Uri uri = Uri.parse("geo:0,0?q= Jaypee University of Engineering and Technology Guna");
-//        Intent intent= new Intent(Intent.ACTION_VIEW, uri);
-//        intent.setPackage("com.google.android.apps.maps");
-//        startActivity(intent);
-//    }
+    private void openMap()
+    {
+        Uri uri = Uri.parse("geo:0,0?q= Jaypee University of Engineering and Technology Guna");
+        Intent intent= new Intent(Intent.ACTION_VIEW, uri);
+        intent.setPackage("com.google.android.apps.maps");
+        startActivity(intent);
+    }
     public void showImage(int img)
     {
         ImageView imageview=new ImageView(getActivity());

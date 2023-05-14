@@ -200,13 +200,21 @@
                     android:textSize="@dimen/text_size"
                     android:textColor="@color/textColor"
                     android:fontFamily="@string/light"/>
-                
-<!--                <ImageView-->
-<!--                    android:layout_marginTop="50dp"-->
-<!--                    android:id="@+id/map"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="230dp"-->
-<!--                    android:src="@drawable/mapimage"/>-->
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Click on below image to get directed on Google Maps"
+                    android:layout_marginHorizontal="@dimen/text_margin"
+                    android:textSize="15sp"
+                    android:textColor="#0000FF"
+                    android:fontFamily="@string/bold"/>
+                <ImageView
+                    android:id="@+id/map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp"
+                    android:src="@drawable/mapimage"/>
 
             </LinearLayout>
 
