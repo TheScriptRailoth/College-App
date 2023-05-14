@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle= new ActionBarDrawerToggle(this, drawerLayout,R.string.start, R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-
-       //Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         ActionBar actionBar;
         actionBar = getSupportActionBar();
         if (actionBar != null) {
