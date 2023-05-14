@@ -1,3 +1,14 @@
+buildscript {
+    repositories {
+        // other repositories...
+        google()
+        jcenter()
+    }
+    dependencies {
+        // other dependencies...
+        classpath 'com.google.gms:google-services:4.3.10'
+    }
+}
 
 plugins {
     id 'com.android.application' version '8.0.0' apply false
