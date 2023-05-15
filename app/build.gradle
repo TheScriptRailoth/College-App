@@ -40,6 +40,6 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.0.1'
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     implementation 'com.google.firebase:firebase-database:20.2.1'
-    //implementation 'com.github.chrisbanes:PhotoView:latest.release.here'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
 }
 

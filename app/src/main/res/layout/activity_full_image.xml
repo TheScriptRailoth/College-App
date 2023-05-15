@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".FullImage">
 
-    <ImageView
+    <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
