@@ -81,7 +81,7 @@
                             android:layout_marginHorizontal="@dimen/text_margin"
                             android:textSize="@dimen/text_size"
                             android:layout_gravity="center_horizontal"
-                            android:textColor="@color/textColor"
+                            android:textColor="@color/departments"
                             android:layout_margin="8dp"
                             android:fontFamily="@string/light"/>
 
@@ -98,7 +98,7 @@
                             android:layout_marginHorizontal="@dimen/text_margin"
                             android:textSize="@dimen/text_size"
                             android:layout_gravity="center_horizontal"
-                            android:textColor="@color/textColor"
+                            android:textColor="@color/departments"
                             android:layout_margin="8dp"
                             android:fontFamily="@string/light"/>
 
@@ -115,7 +115,7 @@
                                 android:layout_marginHorizontal="@dimen/text_margin"
                                 android:textSize="@dimen/text_size"
                                 android:layout_gravity="center_horizontal"
-                                android:textColor="@color/textColor"
+                                android:textColor="@color/departments"
                                 android:layout_margin="8dp"
                                 android:fontFamily="@string/light"/>
                             <View
@@ -130,7 +130,7 @@
                                 android:layout_marginHorizontal="@dimen/text_margin"
                                 android:textSize="@dimen/text_size"
                                 android:layout_gravity="center_horizontal"
-                                android:textColor="@color/textColor"
+                                android:textColor="@color/departments"
                                 android:layout_margin="8dp"
                                 android:fontFamily="@string/light"/>
                             <View
@@ -145,7 +145,7 @@
                                 android:layout_marginHorizontal="@dimen/text_margin"
                                 android:textSize="@dimen/text_size"
                                 android:layout_gravity="center_horizontal"
-                                android:textColor="@color/textColor"
+                                android:textColor="@color/departments"
                                 android:layout_margin="8dp"
                                 android:fontFamily="@string/light"/>
 
