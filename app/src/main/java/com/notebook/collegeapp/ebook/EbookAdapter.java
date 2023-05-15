@@ -45,7 +45,6 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
             public void onClick(View view) {
                 int clickedPosition = holder.getAdapterPosition();
                 String pdfTitle = list.get(clickedPosition).getPdfTitle();
-                Toast.makeText(view.getContext(), pdfTitle, Toast.LENGTH_SHORT).show();
 
                 int currentPosition = holder.getAdapterPosition();
                 String pdfUrl = list.get(currentPosition).getPdfUrl();
@@ -65,7 +64,18 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
             public void onClick(View view) {
                 int clickedPosition;
                 clickedPosition = holder.getAdapterPosition();
-                Toast.makeText(view.getContext(), "Download", Toast.LENGTH_SHORT).show();
+
+                int currentPosition = holder.getAdapterPosition();
+                String pdfUrl = list.get(currentPosition).getPdfUrl();
+                try {
+                    Uri uri = Uri.parse(pdfUrl);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    view.getContext().startActivity(Intent.createChooser(intent, "Open link with"));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(view.getContext(), "Error opening link", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

@@ -57,7 +57,7 @@ public class GalleryFragment extends Fragment {
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
 
                     String data = (String) snapshot.getValue();
-                    imageList.add(data);
+                    imageList.add(0,data);
                 }
 
                 adapter = new GalleryAdapter(getContext(),imageList);
@@ -83,7 +83,7 @@ public class GalleryFragment extends Fragment {
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
 
                     String data = (String) snapshot.getValue();
-                    imageList.add(data);
+                    imageList.add(0,data);
                 }
 
                 adapter = new GalleryAdapter(getContext(),imageList);
@@ -109,7 +109,7 @@ public class GalleryFragment extends Fragment {
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
 
                     String data = (String) snapshot.getValue();
-                    imageList.add(data);
+                    imageList.add(0,data);
                 }
 
                 adapter = new GalleryAdapter(getContext(),imageList);
