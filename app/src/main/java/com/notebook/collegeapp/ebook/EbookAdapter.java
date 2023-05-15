@@ -1,6 +1,10 @@
 package com.notebook.collegeapp.ebook;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,22 +38,36 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
 
     @Override
     public void onBindViewHolder(@NonNull EbookViewHolder holder, int position) {
-
         holder.ebookName.setText(list.get(position).getPdfTitle());
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,"Pdf Clicked",Toast.LENGTH_SHORT).show();
+                int clickedPosition = holder.getAdapterPosition();
+                String pdfTitle = list.get(clickedPosition).getPdfTitle();
+                Toast.makeText(view.getContext(), pdfTitle, Toast.LENGTH_SHORT).show();
+
+                int currentPosition = holder.getAdapterPosition();
+                String pdfUrl = list.get(currentPosition).getPdfUrl();
+                try {
+                    Uri uri = Uri.parse(pdfUrl);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    view.getContext().startActivity(Intent.createChooser(intent, "Open link with"));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(view.getContext(), "Error opening link", Toast.LENGTH_SHORT).show();
+                }
             }
         });
-
         holder.ebookDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,"Download", Toast.LENGTH_SHORT).show();
+                int clickedPosition;
+                clickedPosition = holder.getAdapterPosition();
+                Toast.makeText(view.getContext(), "Download", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     @Override
