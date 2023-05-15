@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
+import com.notebook.collegeapp.ebook.EbookActivity;
 
 import java.util.Objects;
 
@@ -75,7 +77,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (item.getItemId() == R.id.navigation_ebook)
         {
-            Toast.makeText(this, "Ebooks", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, EbookActivity.class));
+
         }
         else if (item.getItemId() == R.id.navigation_video)
         {
