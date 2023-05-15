@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (item.getItemId() == R.id.navigation_ebook)
         {
+            startActivity(new Intent(this, EbookActivity.class));
             Toast.makeText(this, "Ebooks", Toast.LENGTH_SHORT).show();
         }
         else if (item.getItemId() == R.id.navigation_video)
