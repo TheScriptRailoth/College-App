@@ -103,11 +103,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (item.getItemId() == R.id.navigation_website)
         {
-//            String url="https://www.juet.ac.in/";
-//            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//            startActivity(intent);
-//            Toast.makeText(this, "Website", Toast.LENGTH_SHORT).show();
+            String url="https://www.juet.ac.in/";
+            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            Toast.makeText(this, "Website", Toast.LENGTH_SHORT).show();
         }
         return true;
     }
