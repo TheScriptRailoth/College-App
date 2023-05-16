@@ -9,7 +9,8 @@
         android:icon="@drawable/ebook"/>
     <item android:id="@+id/navigation_theme"
         android:title="Theme"
-        android:icon="@drawable/theme"/>
+        android:icon="@drawable/theme"
+        android:actionLayout="@layout/activity_theme"/>
     <item android:id="@+id/navigation_website"
         android:title="Website"
         android:icon="@drawable/website"/>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.FileProvider;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -24,7 +25,9 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.RatingBar;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -54,6 +57,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if(loadState()==true){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            setTheme(R.style.Night_Theme_CollegeApp);
+        }
+        else{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            setTheme(R.style.Base_Theme_CollegeApp);
+        }
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         navController = Navigation.findNavController(this,R.id.frame_layout);
         drawerLayout = findViewById(R.id.drawerLayout);
@@ -112,7 +125,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (item.getItemId() == R.id.navigation_theme)
         {
-            Toast.makeText(this, "Theme", Toast.LENGTH_SHORT).show();
+            item.setActionView(R.layout.activity_theme);
+            final Switch themeSwitch = (Switch) item.getActionView().findViewById(R.id.theme_switch);
+            if(loadState() == true){
+                themeSwitch.setChecked(true);
+            }
+            themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if(isChecked){
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                        saveState(true);
+                        recreate();
+                    }
+                    else{
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                        saveState(false);
+                    }
+                }
+            });
         }
         else if (item.getItemId() == R.id.navigation_website)
         {
@@ -155,6 +186,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
         dialog.show();
+    }
+
+    private void saveState(Boolean state){
+        SharedPreferences sharedPreferences= getSharedPreferences("ABHOPositive",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("NightMode",state);
+        editor.apply();
+    }
+
+    private Boolean loadState(){
+        SharedPreferences sharedPreferences = getSharedPreferences("ABHOPositive",MODE_PRIVATE);
+        Boolean state = sharedPreferences.getBoolean("NightMode",false);
+        return state;
     }
 
 }
