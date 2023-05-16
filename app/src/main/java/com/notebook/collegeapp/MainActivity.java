@@ -13,6 +13,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -79,10 +80,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if (item.getItemId() == R.id.navigation_ebook)
         {
             startActivity(new Intent(this, EbookActivity.class));
-
         }
         else if (item.getItemId() == R.id.navigation_video)
         {
+            String url = "https://www.youtube.com/@juetguna6527";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
             Toast.makeText(this, "Video Lectures", Toast.LENGTH_SHORT).show();
         }
         else if (item.getItemId() == R.id.navigation_rate)
@@ -99,7 +103,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (item.getItemId() == R.id.navigation_website)
         {
-            Toast.makeText(this, "Website", Toast.LENGTH_SHORT).show();
+//            String url="https://www.juet.ac.in/";
+//            Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            startActivity(intent);
+//            Toast.makeText(this, "Website", Toast.LENGTH_SHORT).show();
         }
         return true;
     }
