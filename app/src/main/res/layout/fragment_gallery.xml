@@ -11,12 +11,68 @@
         android:padding="@dimen/text_margin"
         android:orientation="vertical"
         >
+
         <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_marginVertical="8dp"
         android:layout_height="280dp">
 
-        <LinearLayout
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="694dp">
+
+                <LinearLayout
+                    android:id="@+id/shimmerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -57,6 +113,60 @@
             android:layout_marginVertical="8dp"
             android:layout_height="280dp">
 
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container1"
+                android:layout_width="wrap_content"
+                android:layout_height="694dp">
+
+                <LinearLayout
+                    android:id="@+id/shimmerLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -98,6 +208,60 @@
             android:layout_width="match_parent"
             android:layout_marginVertical="8dp"
             android:layout_height="280dp">
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container2"
+                android:layout_width="wrap_content"
+                android:layout_height="694dp">
+
+                <LinearLayout
+                    android:id="@+id/shimmerLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                    <include layout="@layout/shimmer_for_ebook"></include>
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -135,7 +299,7 @@
 
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
-        
-   
+
+
 
 </androidx.core.widget.NestedScrollView>

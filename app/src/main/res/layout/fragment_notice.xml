@@ -13,12 +13,45 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        >
 
-    </ProgressBar>
+        <LinearLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+            <include layout="@layout/shimmer_for_ebook"></include>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
 
 </RelativeLayout>

@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +30,10 @@ public class GalleryFragment extends Fragment {
     RecyclerView dequinox,cultural,others;
     GalleryAdapter adapter;
     DatabaseReference reference;
+    ShimmerFrameLayout shimmerFrameLayout,shimmerFrameLayout1,shimmerFrameLayout2;
+
+
+    LinearLayout shimmerLayout,shimmerLayout1,shimmerLayout2;
 
 
     @Override
@@ -40,6 +46,15 @@ public class GalleryFragment extends Fragment {
         others = view.findViewById(R.id.others);
         
         reference = FirebaseDatabase.getInstance().getReference().child("gallery");
+        shimmerFrameLayout = view.findViewById(R.id.shimmer_view_container);
+
+        shimmerLayout = view.findViewById(R.id.shimmerLayout);
+        shimmerFrameLayout1 = view.findViewById(R.id.shimmer_view_container1);
+
+        shimmerLayout1 = view.findViewById(R.id.shimmerLayout1);
+        shimmerFrameLayout2 = view.findViewById(R.id.shimmer_view_container2);
+
+        shimmerLayout2 = view.findViewById(R.id.shimmerLayout2);
         
         getDequinoxImage();
         getCulturalImage();
@@ -63,6 +78,9 @@ public class GalleryFragment extends Fragment {
                 adapter = new GalleryAdapter(getContext(),imageList);
                 others.setLayoutManager(new GridLayoutManager(getContext(),3));
                 others.setAdapter(adapter);
+                shimmerFrameLayout2.stopShimmer();
+
+                shimmerLayout2.setVisibility(View.GONE);
             }
 
             @Override
@@ -89,6 +107,9 @@ public class GalleryFragment extends Fragment {
                 adapter = new GalleryAdapter(getContext(),imageList);
                 cultural.setLayoutManager(new GridLayoutManager(getContext(),3));
                 cultural.setAdapter(adapter);
+                shimmerFrameLayout1.stopShimmer();
+
+                shimmerLayout1.setVisibility(View.GONE);
             }
 
             @Override
@@ -115,6 +136,9 @@ public class GalleryFragment extends Fragment {
                 adapter = new GalleryAdapter(getContext(),imageList);
                 dequinox.setLayoutManager(new GridLayoutManager(getContext(),3));
                 dequinox.setAdapter(adapter);
+                shimmerFrameLayout.stopShimmer();
+
+                shimmerLayout.setVisibility(View.GONE);
             }
 
             @Override
