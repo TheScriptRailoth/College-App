@@ -3,6 +3,7 @@ package com.notebook.collegeapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import androidx.core.view.GravityCompat;
@@ -19,7 +20,11 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -98,7 +103,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         else if (item.getItemId() == R.id.navigation_rate)
         {
-            Toast.makeText(this, "Rate Us", Toast.LENGTH_SHORT).show();
+            showRatingDialog();
+            //Toast.makeText(this, "Rate Us", Toast.LENGTH_SHORT).show();
         }
         else if (item.getItemId() == R.id.navigation_share)
         {
@@ -134,4 +140,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
     }
+
+    private void showRatingDialog() {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_rating, null);
+        dialogBuilder.setView(dialogView);
+
+        RatingBar ratingBar = dialogView.findViewById(R.id.ratingBar);
+        Button submitButton = dialogView.findViewById(R.id.submitButton);
+
+        AlertDialog dialog = dialogBuilder.create();
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                float rating = ratingBar.getRating();
+                // TODO: Handle the submitted rating
+                Toast.makeText(MainActivity.this,"Thanks For Your Feedback!",Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
 }
