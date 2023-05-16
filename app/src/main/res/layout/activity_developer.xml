@@ -45,26 +45,20 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
                 android:text="Ashutosh Mishra"
+                android:textColor="#676767"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/occupationTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/nameTextView"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="1dp"
-                android:text="(TheScriptRailoth)"
-                android:textSize="16sp" />
+
             <TextView
                 android:id="@+id/TextView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/occupationTextView"
+                android:layout_below="@id/nameTextView"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
                 android:text="Software Developer"
+                android:textColor="#676767"
                 android:textSize="18sp" />
 
             <Button
@@ -100,7 +94,7 @@
                 android:layout_width="100dp"
                 android:layout_height="102dp"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/aviral"
+                android:src="@drawable/aviral1"
                 app:civ_border_color="#FFFFFF"
                 app:civ_border_width="2dp" />
 
@@ -112,6 +106,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="16dp"
                 android:text="Aviral Jain"
+                android:textColor="#676767"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -123,6 +118,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
                 android:text="Software Developer"
+                android:textColor="#676767"
                 android:textSize="18sp" />
 
             <Button
