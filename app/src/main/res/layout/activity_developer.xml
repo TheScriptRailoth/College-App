@@ -1,0 +1,142 @@
+<!-- activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developers"
+        android:fontFamily="@string/bold"
+        android:textSize="@dimen/title_size"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="25dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#E0E0E0"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="100dp"
+                android:layout_height="102dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/my_profile"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Ashutosh Mishra"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/occupationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:text="(TheScriptRailoth)"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/TextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/occupationTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Software Developer"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/githubButton"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/TextView3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textSize="7sp"
+                android:text="Visit GitHub Profile" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#E0E0E0"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImageView2"
+                android:layout_width="100dp"
+                android:layout_height="102dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/aviral"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/nameTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileImageView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Aviral Jain"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/occupationTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTextView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="Software Developer"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/githubButton2"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/occupationTextView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textSize="7sp"
+                android:text="Visit GitHub Profile" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

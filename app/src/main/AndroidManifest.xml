@@ -16,12 +16,15 @@
         android:theme="@style/Theme.CollegeApp"
         tools:targetApi="31">
         <activity
+            android:name=".developer_activity"
+            android:exported="false" />
+        <activity
             android:name=".FullImage"
             android:exported="false" />
         <activity
             android:name=".ebook.EbookActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

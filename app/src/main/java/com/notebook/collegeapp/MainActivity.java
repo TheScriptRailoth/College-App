@@ -54,10 +54,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         navController = Navigation.findNavController(this,R.id.frame_layout);
-
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigation_view);
         toggle= new ActionBarDrawerToggle(this, drawerLayout,R.string.start, R.string.close);
@@ -68,12 +66,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
-
         navigationView.setNavigationItemSelectedListener(this);
         NavigationUI.setupWithNavController(bottomNavigationView,navController);
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(toggle.onOptionsItemSelected(item))
@@ -87,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.navigation_developer)
         {
+            Intent intent=new Intent(this, developer_activity.class);
+            startActivity(intent);
             Toast.makeText(this, "Developers", Toast.LENGTH_SHORT).show();
         }
         else if (item.getItemId() == R.id.navigation_ebook)
@@ -99,12 +96,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            Toast.makeText(this, "Video Lectures", Toast.LENGTH_SHORT).show();
         }
         else if (item.getItemId() == R.id.navigation_rate)
         {
             showRatingDialog();
-            //Toast.makeText(this, "Rate Us", Toast.LENGTH_SHORT).show();
         }
         else if (item.getItemId() == R.id.navigation_share)
         {
@@ -114,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             intent.putExtra(Intent.EXTRA_SUBJECT,"Checkout this application");
             intent.putExtra(Intent.EXTRA_TEXT,"Your Application Link Is Here: \n"+url);
             startActivity(Intent.createChooser(intent,"Share Via"));
-            Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
         }
         else if (item.getItemId() == R.id.navigation_theme)
         {
@@ -126,7 +120,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent=new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-            Toast.makeText(this, "Website", Toast.LENGTH_SHORT).show();
         }
         return true;
     }
@@ -140,7 +133,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
     }
-
     private void showRatingDialog() {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
