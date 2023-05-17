@@ -16,7 +16,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_pdf"/>
+            android:src="@drawable/ic_pdf"
+            app:tint="#1D5BA5" />
         <TextView
             android:id="@+id/ebookName"
             android:layout_width="match_parent"
@@ -31,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_download"
+            app:tint="#1D5BA5"
             android:layout_marginLeft="-30dp"/>
 
 
