@@ -4,7 +4,7 @@
 
     <item android:id="@+id/navigation_video"
         android:title="Video Lectures"
-        android:icon="@drawable/video" />
+        android:icon="@drawable/video"/>
     <item android:id="@+id/navigation_ebook"
         android:title="Ebooks"
         android:icon="@drawable/ebook" />
