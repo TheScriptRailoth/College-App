@@ -110,6 +110,8 @@
                 app:civ_border_color="#FFFFFF"
                 app:civ_border_width="2dp" />
 
+
+
             <TextView
                 android:id="@+id/nameTextView2"
                 android:layout_width="wrap_content"
@@ -121,12 +123,22 @@
                 android:textColor="#676767"
                 android:textSize="22sp"
                 android:textStyle="bold" />
+            <TextView
+                android:id="@+id/TextView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTextView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:text="(aviraljain19)"
+                android:textColor="#676767"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/occupationTextView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/nameTextView2"
+                android:layout_below="@id/TextView4"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
                 android:text="Software Developer"
